@@ -219,16 +219,41 @@ canvas, .text, .frame, .outline, img {
 
 #banner {
   width: 300px;
-  height: 600px;
+  height: 250px;
+}
+
+#olg {
+  width: 108px;
+  height: 69px;
+  -webkit-transform: translate(0px, 193px);
+  -ms-transform: translate(0px, 193px);
+  transform: translate(0px, 193px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+#legalBtn {
+  -webkit-transform: translate(240px, 204px);
+  -ms-transform: translate(240px, 204px);
+  transform: translate(240px, 204px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+  width: 60px;
 }
 
 .frame1 .logo-group {
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
-  -webkit-transform: translate(87px, 64px) scale(0.5, 0.5);
-  -ms-transform: translate(87px, 64px) scale(0.5, 0.5);
-  transform: translate(87px, 64px) scale(0.5, 0.5);
+  -webkit-transform: translate(165px, -31px) scale(0.5, 0.5);
+  -ms-transform: translate(165px, -31px) scale(0.5, 0.5);
+  transform: translate(165px, -31px) scale(0.5, 0.5);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-perspective: 1000px;
@@ -240,9 +265,9 @@ canvas, .text, .frame, .outline, img {
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
-  -webkit-transform: translate(-8px, 272px) scale(0.5, 0.5);
-  -ms-transform: translate(-8px, 272px) scale(0.5, 0.5);
-  transform: translate(-8px, 272px) scale(0.5, 0.5);
+  -webkit-transform: translate(121px, 53px) scale(0.5, 0.5);
+  -ms-transform: translate(121px, 53px) scale(0.5, 0.5);
+  transform: translate(121px, 53px) scale(0.5, 0.5);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-perspective: 1000px;
@@ -254,9 +279,9 @@ canvas, .text, .frame, .outline, img {
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
-  -webkit-transform: translate(-6px, 272px) scale(0.5, 0.5);
-  -ms-transform: translate(-6px, 272px) scale(0.5, 0.5);
-  transform: translate(-6px, 272px) scale(0.5, 0.5);
+  -webkit-transform: translate(121px, 57px) scale(0.5, 0.5);
+  -ms-transform: translate(121px, 57px) scale(0.5, 0.5);
+  transform: translate(121px, 57px) scale(0.5, 0.5);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-perspective: 1000px;
@@ -268,39 +293,14 @@ canvas, .text, .frame, .outline, img {
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
-  -webkit-transform: translate(76px, 158px) scale(0.32, 0.32);
-  -ms-transform: translate(76px, 158px) scale(0.32, 0.32);
-  transform: translate(76px, 158px) scale(0.32, 0.32);
+  -webkit-transform: translate(172px, -31px) scale(0.45, 0.45);
+  -ms-transform: translate(172px, -31px) scale(0.45, 0.45);
+  transform: translate(172px, -31px) scale(0.45, 0.45);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-perspective: 1000px;
   perspective: 1000px;
   position: absolute;
-}
-
-#olg {
-  width: 129px;
-  height: 89px;
-  -webkit-transform: translate(0px, 526px);
-  -ms-transform: translate(0px, 526px);
-  transform: translate(0px, 526px);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
-  position: absolute;
-}
-
-#legalBtn {
-  -webkit-transform: translate(206px, 0px);
-  -ms-transform: translate(206px, 0px);
-  transform: translate(206px, 0px);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000px;
-  perspective: 1000px;
-  position: absolute;
-  width: 92px;
 }
 
 /*# sourceMappingURL=main.css.map */

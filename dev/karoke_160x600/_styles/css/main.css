@@ -303,4 +303,60 @@ canvas, .text, .frame, .outline, img {
   position: absolute;
 }
 
+.frame1 .logo-group {
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transform: translate(46px, 136px) scale(0.5, 0.5);
+  -ms-transform: translate(46px, 136px) scale(0.5, 0.5);
+  transform: translate(46px, 136px) scale(0.5, 0.5);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+.phone-max-logo {
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transform: translate(-75px, 266px) scale(0.5, 0.5);
+  -ms-transform: translate(-75px, 266px) scale(0.5, 0.5);
+  transform: translate(-75px, 266px) scale(0.5, 0.5);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+.phone-649-logo {
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transform: translate(-66px, 268px) scale(0.5, 0.5);
+  -ms-transform: translate(-66px, 268px) scale(0.5, 0.5);
+  transform: translate(-66px, 268px) scale(0.5, 0.5);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+.frame2 .logo-group {
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transform: translate(42px, 225px) scale(0.5, 0.5);
+  -ms-transform: translate(42px, 225px) scale(0.5, 0.5);
+  transform: translate(42px, 225px) scale(0.5, 0.5);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
 /*# sourceMappingURL=main.css.map */

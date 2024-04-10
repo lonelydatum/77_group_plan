@@ -24,3 +24,33 @@
 	display: none;
 	// opacity: 1 !important;
 }
+
+.frame2 .t3{	
+	@include pos-scale(0, 4, .5);
+}
+
+
+.frame1 .logo-group{
+	transform-origin: 50% 50%;
+	@include pos-scale(99, -19, .5);
+}
+
+
+
+.phone-max-logo{
+	transform-origin: 50% 50%;
+	@include pos-scale(222, 3, .5);
+}
+
+
+.phone-649-logo{
+	transform-origin: 50% 50%;
+	@include pos-scale(222, 2, .5);
+}
+
+.frame2 .logo-group{
+	transform-origin: 50% 50%;
+	@include pos-scale(244, -24, .32);
+}
+
+

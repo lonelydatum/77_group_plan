@@ -20,3 +20,29 @@
 	width: 60px;
 	// opacity:1;
 }
+
+
+
+
+.frame1 .logo-group{
+	transform-origin: 50% 50%;
+	@include pos-scale(165, -31, .5);
+}
+
+
+
+.phone-max-logo{
+	transform-origin: 50% 50%;
+	@include pos-scale(121, 53, .5);
+}
+
+
+.phone-649-logo{
+	transform-origin: 50% 50%;
+	@include pos-scale(121, 57, .5);
+}
+
+.frame2 .logo-group{
+	transform-origin: 50% 50%;
+	@include pos-scale(172, -31, .45);
+}
