@@ -1,31 +1,3 @@
 @import '../../../_common/styles/b970x250.scss';
 
 
-
-.frame1 .logo-group{
-	transform-origin: 50% 50%;
-	@include pos-scale(260, -22, .5);
-}
-
-
-
-.phone-max-logo{
-	transform-origin: 50% 50%;
-	@include pos-scale(457, 40, .5);
-}
-
-
-.phone-649-logo{
-	transform-origin: 50% 50%;
-	@include pos-scale(460, 36, .5);
-}
-
-.frame2 .logo-group{
-	transform-origin: 50% 50%;
-	@include pos-scale(442, -109, .22);
-}
-
-
-.frame2 .t3{	
-	@include pos-scale(0, 24, .5);
-}

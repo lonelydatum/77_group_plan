@@ -2,26 +2,3 @@
 
 
 
-
-.frame1 .logo-group{
-	transform-origin: 50% 50%;
-	@include pos-scale(46, 136, .5);
-}
-
-
-
-.phone-max-logo{
-	transform-origin: 50% 50%;
-	@include pos-scale(-75, 266, .5);
-}
-
-
-.phone-649-logo{
-	transform-origin: 50% 50%;
-	@include pos-scale(-66, 268, .5);
-}
-
-.frame2 .logo-group{
-	transform-origin: 50% 50%;
-	@include pos-scale(42, 225, .5);
-}
