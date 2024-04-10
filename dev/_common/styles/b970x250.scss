@@ -18,8 +18,12 @@
 
 
 #legalBtn{	
-	@include pos(820, 185);	
+	@include pos(820, 0);	
 	width: 140px;
 	height: 50px;
 	// opacity: 1 !important;
+}
+#legalContent{
+	font-size: 14px;
+	padding: 20px;
 }

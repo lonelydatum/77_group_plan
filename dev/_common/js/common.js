@@ -69,6 +69,7 @@ function init(){
 		tl.to(".t3", {duration:.3, y:0}, "cta")
 	}
 	tl.from(".cta", {duration:.3, opacity:0}, "cta")
+	tl.to(".wedge", {duration:.3, opacity:0}, "cta")
 	
 	// tl.play("f2")
 	tl.add(olg())
