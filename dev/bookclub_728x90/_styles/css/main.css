@@ -293,9 +293,9 @@ canvas, .text, .frame, .outline, img {
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
-  -webkit-transform: translate(458px, -30px) scale(0.4, 0.4);
-  -ms-transform: translate(458px, -30px) scale(0.4, 0.4);
-  transform: translate(458px, -30px) scale(0.4, 0.4);
+  -webkit-transform: translate(549px, -30px) scale(0.4, 0.4);
+  -ms-transform: translate(549px, -30px) scale(0.4, 0.4);
+  transform: translate(549px, -30px) scale(0.4, 0.4);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-perspective: 1000px;

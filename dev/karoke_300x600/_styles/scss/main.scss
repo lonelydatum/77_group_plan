@@ -1,0 +1,47 @@
+@import '../../../_common/styles/common.scss';
+#banner{
+	width: 300px;
+	height: 600px;
+}
+
+
+
+.frame1 .logo-group{
+	transform-origin: 50% 50%;
+	@include pos-scale(87, 64, .5);
+}
+
+
+
+.phone-max-logo{
+	transform-origin: 50% 50%;
+	@include pos-scale(-8, 272, .5);
+}
+
+
+.phone-649-logo{
+	transform-origin: 50% 50%;
+	@include pos-scale(-6, 272, .5);
+}
+
+.frame2 .logo-group{
+	transform-origin: 50% 50%;
+	@include pos-scale(76, 158, .32);
+}
+
+#olg{
+	width: 129px;
+	height: 89px;
+	@include pos(0, 526);
+	// opacity: .5 !important;
+	;
+}
+
+
+
+
+#legalBtn{	
+	@include pos(206, 0);	
+	width: 92px;
+	// opacity: 1;
+}
