@@ -16,8 +16,8 @@ gsap.defaults({
 	ease: "power3.out"
 });
 
-var READ_T1 = { bookclub: 2 };
-var READ_T2 = { bookclub: 2.5 };
+var READ_T1 = { bookclub: 1.8 };
+var READ_T2 = { bookclub: 2.2 };
 var READ_T3 = {};
 
 var w = bannerSize.w;

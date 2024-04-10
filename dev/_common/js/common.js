@@ -9,8 +9,8 @@ gsap.defaults({
 
 
 
-const READ_T1 = {bookclub:2}
-const READ_T2 = {bookclub:2.5}
+const READ_T1 = {bookclub:1.8}
+const READ_T2 = {bookclub:2.2}
 const READ_T3 = {}
 
 const {w, h} = bannerSize
