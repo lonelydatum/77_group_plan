@@ -42,7 +42,7 @@ function init() {
 
 	tl.from(".t1", { duration: SLIDE_DURATION, opacity: 0, y: "+=" + SLIDE_Y });
 	tl.add("t2", "+=" + READ_T1[universalBanner.name]);
-	tl.to(".t1", { duration: SLIDE_DURATION / 2, opacity: 0, y: "-=" + SLIDE_Y }, "t2");
+	tl.to(".t1", { duration: SLIDE_DURATION, opacity: 0, y: "-=" + SLIDE_Y }, "t2");
 
 	tl.from(".t2", { duration: SLIDE_DURATION, opacity: 0, y: "+=" + SLIDE_Y }, "t2");
 	tl.from(".frame1 .logo-group", { duration: .3, scale: 0, ease: "custom" }, "+=.3");
@@ -67,7 +67,11 @@ function init() {
 	tl.from(".phone-olg", { duration: .3, opacity: 0 }, "+=.3");
 	tl.from(".frame2 .logo-group", { duration: .3, scale: 0, ease: "custom" }, "+=.5");
 
-	tl.from(".cta", { duration: .3, opacity: 0 }, "+=.5");
+	tl.add("cta", "+=.3");
+	if (w === 728) {
+		tl.to(".t3", { duration: .3, y: 0 }, "cta");
+	}
+	tl.from(".cta", { duration: .3, opacity: 0 }, "cta");
 
 	// tl.play("f2")
 	tl.add((0, _proline.olg)());
@@ -106,7 +110,9 @@ function b_970x70() {}
 
 function b_320x50() {}
 
-function b_728x90(text1) {}
+function b_728x90() {
+	standard();
+}
 
 exports.init = init;
 exports.b_160x600 = b_160x600;

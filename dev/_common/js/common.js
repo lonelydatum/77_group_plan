@@ -36,7 +36,7 @@ function init(){
 
 	tl.from(".t1", {duration:SLIDE_DURATION, opacity:0, y:`+=${SLIDE_Y}`})
 	tl.add("t2", `+=${READ_T1[universalBanner.name]}`)
-	tl.to(".t1", {duration:SLIDE_DURATION/2, opacity:0, y:`-=${SLIDE_Y}`}, "t2")
+	tl.to(".t1", {duration:SLIDE_DURATION, opacity:0, y:`-=${SLIDE_Y}`}, "t2")
 
 	tl.from(".t2", {duration:SLIDE_DURATION, opacity:0, y:`+=${SLIDE_Y}`}, "t2")
 	tl.from(".frame1 .logo-group", {duration:.3, scale:0, ease:"custom"}, "+=.3")
@@ -64,8 +64,11 @@ function init(){
 	tl.from(".phone-olg", {duration:.3, opacity:0}, "+=.3")
 	tl.from(".frame2 .logo-group", {duration:.3, scale:0, ease:"custom"}, "+=.5")
 
-
-	tl.from(".cta", {duration:.3, opacity:0}, "+=.5")
+	tl.add("cta", "+=.3")
+	if(w===728){
+		tl.to(".t3", {duration:.3, y:0}, "cta")
+	}
+	tl.from(".cta", {duration:.3, opacity:0}, "cta")
 	
 	// tl.play("f2")
 	tl.add(olg())
@@ -113,8 +116,8 @@ function b_320x50(){
 	
 }
 
-function b_728x90(text1){
-	
+function b_728x90(){
+	standard()
 }
 
 export { init, b_160x600, b_300x250, b_300x600, b_320x50, b_728x90, b_970x250, b_1000x700,b_970x70, standard,   }
