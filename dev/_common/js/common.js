@@ -36,17 +36,19 @@ function init(){
 
 	tl.from(".t1", {duration:SLIDE_DURATION, opacity:0, y:`+=${SLIDE_Y}`})
 	tl.add("t2", `+=${READ_T1[universalBanner.name]}`)
-	tl.to(".t1", {duration:SLIDE_DURATION, opacity:0, y:"-=100"}, "t2")
+	tl.to(".t1", {duration:SLIDE_DURATION/2, opacity:0, y:"-=100"}, "t2")
 
 	tl.from(".t2", {duration:SLIDE_DURATION, opacity:0, y:`+=${SLIDE_Y}`}, "t2")
 	tl.from(".frame1 .logo-group", {duration:.3, scale:0, ease:"custom"}, "+=.3")
-	// tl.to(".t2", {duration:.3, opacity:0}, `+=${READ_T2[universalBanner.name]}`)
+	
+
+
 	tl.add("f2", `+=${READ_T2[universalBanner.name]}`)
 	tl.set(".frame2", {opacity:1}, "f2")	
 	tl.from(".bg", {duration:.3, opacity:0, y:h/2})
 	tl.from(".t3", {duration:SLIDE_DURATION, y:`+=${SLIDE_Y}`, opacity:0}, "+=.3")
 	
-	tl.from([".phone", ".phone-max-bg"], {duration:.3, y:`+=${h}`}, "+=.5")
+	tl.from([".phone"], {duration:.3, y:`+=${h}`}, "+=.5")
 	tl.from(".phone-max-logo", {duration:.3, scale:0, ease:"custom"})
 	
 	tl.add("649", "+=.8")
