@@ -68,7 +68,7 @@ function init() {
 	tl.from(".frame2 .logo-group", { duration: .3, scale: 0, ease: "custom" }, "+=.5");
 
 	tl.add("cta", "+=.3");
-	if (w === 728) {
+	if (w > h) {
 		tl.to(".t3", { duration: .3, y: 0 }, "cta");
 	}
 	tl.from(".cta", { duration: .3, opacity: 0 }, "cta");
@@ -108,7 +108,9 @@ function b_1000x700() {
 
 function b_970x70() {}
 
-function b_320x50() {}
+function b_320x50() {
+	standard();
+}
 
 function b_728x90() {
 	standard();
