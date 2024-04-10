@@ -1,0 +1,35 @@
+@import './common.scss';
+
+
+#banner{
+ width: 160px;
+ height: 600px;
+}
+
+#olg{
+	width: 87px;
+	height: 49px;
+	@include pos(0, 555);
+	// opacity: .5 !important;
+	
+}
+
+
+
+
+#legalBtn{	
+	@include pos(90, 0);	
+	width: 72px;
+	// opacity: 1;
+}
+
+
+.glow-green{
+	-webkit-filter: drop-shadow(0px 0px 20px #d9efa5);
+         filter: drop-shadow(0px 0px 20px #d9efa5);
+}
+
+.glow-white{
+	-webkit-filter: drop-shadow(0px 0px 20px #9de6f0);
+         filter: drop-shadow(0px 0px 20px #9de6f0);
+}
