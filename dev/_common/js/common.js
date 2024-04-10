@@ -26,7 +26,7 @@ function ender(){
 
 function init(){	
 	const SLIDE_DURATION = .5
-	const SLIDE_Y = 100
+	const SLIDE_Y = 50
 	const tl = new TimelineMax({onComplete:()=>{
 		if(document.getElementById("legalBtn")){			
 			TweenLite.set("#legalBtn", {display:"block"})
@@ -36,7 +36,7 @@ function init(){
 
 	tl.from(".t1", {duration:SLIDE_DURATION, opacity:0, y:`+=${SLIDE_Y}`})
 	tl.add("t2", `+=${READ_T1[universalBanner.name]}`)
-	tl.to(".t1", {duration:SLIDE_DURATION/2, opacity:0, y:"-=100"}, "t2")
+	tl.to(".t1", {duration:SLIDE_DURATION/2, opacity:0, y:`-=${SLIDE_Y}`}, "t2")
 
 	tl.from(".t2", {duration:SLIDE_DURATION, opacity:0, y:`+=${SLIDE_Y}`}, "t2")
 	tl.from(".frame1 .logo-group", {duration:.3, scale:0, ease:"custom"}, "+=.3")
