@@ -1,0 +1,10 @@
+@import '../../../_common/styles/b160x600.scss';
+
+
+
+
+
+.frame1 .logo-group{
+	transform-origin: 50% 50%;
+	@include pos-scale(46, 129, .5);
+}
