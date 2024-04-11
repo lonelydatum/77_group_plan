@@ -16,36 +16,17 @@ gsap.defaults({
 	ease: "power3.out"
 });
 
-var READ_T1 = { bookclub: 1.8, karoke: 1.8 };
-var READ_T2 = { bookclub: 2.2, karoke: 2.2 };
+var READ_T1 = { bookclub: 1.8, karoke: 1.8, generic: 1.8 };
+var READ_T2 = { bookclub: 2.2, karoke: 1.5, generic: 1.8 };
 
 var w = bannerSize.w;
 var h = bannerSize.h;
 
-function ender() {
+var SLIDE_DURATION = .5;
+var SLIDE_Y = 50;
+
+function frame2() {
 	var tl = new TimelineMax();
-	tl.from([".footer"], { duration: .3, opacity: 0 }, "+=.5");
-	tl.add((0, _proline.olg)());
-	return tl;
-}
-
-function init() {
-	var SLIDE_DURATION = .5;
-	var SLIDE_Y = 50;
-	var tl = new TimelineMax({ onComplete: function onComplete() {
-			if (document.getElementById("legalBtn")) {
-				TweenLite.set("#legalBtn", { display: "block" });
-			}
-		} });
-	tl.set(".frame1", { opacity: 1 });
-
-	tl.from(".t1", { duration: SLIDE_DURATION, opacity: 0, y: "+=" + SLIDE_Y });
-	tl.add("t2", "+=" + READ_T1[universalBanner.name]);
-	tl.to(".t1", { duration: SLIDE_DURATION, opacity: 0, y: "-=" + SLIDE_Y }, "t2");
-
-	tl.from(".t2", { duration: SLIDE_DURATION, opacity: 0, y: "+=" + SLIDE_Y }, "t2");
-	tl.from(".frame1 .logo-group", { duration: .3, scale: 0, ease: "custom" }, "+=.3");
-
 	tl.add("f2", "+=" + READ_T2[universalBanner.name]);
 	tl.set(".frame2", { opacity: 1 }, "f2");
 	tl.from(".bg", { duration: .3, opacity: 0, y: h / 2 });
@@ -80,15 +61,53 @@ function init() {
 }
 
 function standard() {
-	var tl = init();
+	if (universalBanner.name === "generic") {
+		generic();
+		return;
+	}
 
-	// tl.add(olg(), "-=.3")
+	var tl = new TimelineMax({ onComplete: function onComplete() {
+			if (document.getElementById("legalBtn")) {
+				TweenLite.set("#legalBtn", { display: "block" });
+			}
+		} });
+	tl.set(".frame1", { opacity: 1 });
 
+	tl.from(".t1", { duration: SLIDE_DURATION, opacity: 0, y: "+=" + SLIDE_Y });
+	tl.add("t2", "+=" + READ_T1[universalBanner.name]);
+	tl.to(".t1", { duration: SLIDE_DURATION, opacity: 0, y: "-=" + SLIDE_Y }, "t2");
+
+	tl.from(".t2", { duration: SLIDE_DURATION, opacity: 0, y: "+=" + SLIDE_Y }, "t2");
+	tl.from(".frame1 .logo-group", { duration: .3, scale: 0, ease: "custom" }, "+=.3");
+
+	tl.add(frame2());
+	return tl;
+}
+
+function generic() {
+	var tl = new TimelineMax({ onComplete: function onComplete() {
+			if (document.getElementById("legalBtn")) {
+				TweenLite.set("#legalBtn", { display: "block" });
+			}
+		} });
+	tl.set(".frame1", { opacity: 1 });
+
+	tl.from(".t1", { duration: SLIDE_DURATION, opacity: 0, y: "+=" + SLIDE_Y });
+
+	tl.add("t2", "+=" + READ_T1[universalBanner.name]);
+	tl.from(".peeps_b", { duration: SLIDE_DURATION, opacity: 0 }, "t2");
+	tl.to(".t1", { duration: SLIDE_DURATION, opacity: 0, y: "-=" + SLIDE_Y }, "t2");
+	tl.from(".t2", { duration: SLIDE_DURATION, opacity: 0, y: "+=" + SLIDE_Y }, "t2");
+
+	tl.add("t3", "+=" + READ_T1[universalBanner.name]);
+	tl.from(".peeps_c", { duration: SLIDE_DURATION, opacity: 0 }, "t3");
+
+	tl.add(frame2());
 	return tl;
 }
 
 function b_970x250() {
-	b_728x90();
+	standard();
 }
 
 function b_160x600() {
@@ -103,12 +122,6 @@ function b_300x600() {
 	standard();
 }
 
-function b_1000x700() {
-	standard();
-}
-
-function b_970x70() {}
-
 function b_320x50() {
 	standard();
 }
@@ -117,16 +130,13 @@ function b_728x90() {
 	standard();
 }
 
-exports.init = init;
+exports.generic = generic;
 exports.b_160x600 = b_160x600;
 exports.b_300x250 = b_300x250;
 exports.b_300x600 = b_300x600;
 exports.b_320x50 = b_320x50;
 exports.b_728x90 = b_728x90;
 exports.b_970x250 = b_970x250;
-exports.b_1000x700 = b_1000x700;
-exports.b_970x70 = b_970x70;
-exports.standard = standard;
 
 },{"./helpers/helpers.js":2,"./proline":3}],2:[function(require,module,exports){
 "use strict";

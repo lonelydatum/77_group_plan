@@ -9,40 +9,19 @@ gsap.defaults({
 
 
 
-const READ_T1 = {bookclub:1.8, karoke:1.8}
-const READ_T2 = {bookclub:2.2, karoke:2.2}
+const READ_T1 = {bookclub:1.8, karoke:1.8, generic:1.8}
+const READ_T2 = {bookclub:2.2, karoke:1.5, generic:1.8}
 
 
 const {w, h} = bannerSize
 
-
-function ender(){
-	const tl = new TimelineMax()	
-	tl.from([".footer"], {duration:.3, opacity:0}, "+=.5")
-	tl.add(olg())
-	return tl	
-}
+const SLIDE_DURATION = .5
+const SLIDE_Y = 50
 
 
-function init(){	
-	const SLIDE_DURATION = .5
-	const SLIDE_Y = 50
-	const tl = new TimelineMax({onComplete:()=>{
-		if(document.getElementById("legalBtn")){			
-			TweenLite.set("#legalBtn", {display:"block"})
-		}
-	}})
-	tl.set(".frame1", {opacity:1})	
 
-	tl.from(".t1", {duration:SLIDE_DURATION, opacity:0, y:`+=${SLIDE_Y}`})
-	tl.add("t2", `+=${READ_T1[universalBanner.name]}`)
-	tl.to(".t1", {duration:SLIDE_DURATION, opacity:0, y:`-=${SLIDE_Y}`}, "t2")
-
-	tl.from(".t2", {duration:SLIDE_DURATION, opacity:0, y:`+=${SLIDE_Y}`}, "t2")
-	tl.from(".frame1 .logo-group", {duration:.3, scale:0, ease:"custom"}, "+=.3")
-	
-
-
+function frame2(){
+	const tl = new TimelineMax()
 	tl.add("f2", `+=${READ_T2[universalBanner.name]}`)
 	tl.set(".frame2", {opacity:1}, "f2")	
 	tl.from(".bg", {duration:.3, opacity:0, y:h/2})
@@ -77,21 +56,60 @@ function init(){
 	return tl
 }
 
-
-
-
-
 function standard(){	
-	const tl = init()	
+	if(universalBanner.name==="generic"){
+		generic()
+		return
+	}
 	
-	
-	// tl.add(olg(), "-=.3")
+	const tl = new TimelineMax({onComplete:()=>{
+		if(document.getElementById("legalBtn")){			
+			TweenLite.set("#legalBtn", {display:"block"})
+		}
+	}})
+	tl.set(".frame1", {opacity:1})	
 
-	return tl
+	tl.from(".t1", {duration:SLIDE_DURATION, opacity:0, y:`+=${SLIDE_Y}`})
+	tl.add("t2", `+=${READ_T1[universalBanner.name]}`)
+	tl.to(".t1", {duration:SLIDE_DURATION, opacity:0, y:`-=${SLIDE_Y}`}, "t2")
+
+	tl.from(".t2", {duration:SLIDE_DURATION, opacity:0, y:`+=${SLIDE_Y}`}, "t2")
+	tl.from(".frame1 .logo-group", {duration:.3, scale:0, ease:"custom"}, "+=.3")
+	
+	tl.add(frame2())
+	return tl	
 }
 
+
+function generic(){	
+	const tl = new TimelineMax({onComplete:()=>{
+		if(document.getElementById("legalBtn")){			
+			TweenLite.set("#legalBtn", {display:"block"})
+		}
+	}})
+	tl.set(".frame1", {opacity:1})	
+
+	tl.from(".t1", {duration:SLIDE_DURATION, opacity:0, y:`+=${SLIDE_Y}`})
+	
+	tl.add("t2", `+=${READ_T1[universalBanner.name]}`)
+	tl.from(".peeps_b", {duration:SLIDE_DURATION, opacity:0}, "t2")
+	tl.to(".t1", {duration:SLIDE_DURATION, opacity:0, y:`-=${SLIDE_Y}`}, "t2")
+	tl.from(".t2", {duration:SLIDE_DURATION, opacity:0, y:`+=${SLIDE_Y}`}, "t2")
+
+
+	tl.add("t3", `+=${READ_T1[universalBanner.name]}`)
+	tl.from(".peeps_c", {duration:SLIDE_DURATION, opacity:0}, "t3")
+	
+	
+	
+	tl.add(frame2())
+	return tl	
+}
+
+
+
 function b_970x250(){
-	b_728x90()
+	standard()
 }
 
 function b_160x600(){
@@ -106,14 +124,6 @@ function b_300x600(){
 	standard()
 }
 
-function b_1000x700(){	
-	standard()
-}
-
-function b_970x70(){
-
-}
-
 function b_320x50(){
 	standard()
 }
@@ -122,4 +132,4 @@ function b_728x90(){
 	standard()
 }
 
-export { init, b_160x600, b_300x250, b_300x600, b_320x50, b_728x90, b_970x250, b_1000x700,b_970x70, standard,   }
+export { generic,  b_160x600, b_300x250, b_300x600, b_320x50, b_728x90, b_970x250   }
