@@ -2,3 +2,8 @@
 
 
 
+
+.frame1 .logo-group{
+	transform-origin: 50% 50%;
+	@include pos-scale(87, 86, .5);
+}

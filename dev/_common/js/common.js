@@ -70,6 +70,7 @@ function init(){
 	}
 	tl.from(".cta", {duration:.3, opacity:0}, "cta")
 	tl.to(".wedge", {duration:.3, opacity:0}, "cta")
+	tl.from(".legal", {duration:.3, opacity:0}, "cta")
 	
 	// tl.play("f2")
 	tl.add(olg())
