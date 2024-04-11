@@ -16,8 +16,8 @@ gsap.defaults({
 	ease: "power3.out"
 });
 
-var READ_T1 = { bookclub: 1.8, karoke: 1.8, generic: 1.8 };
-var READ_T2 = { bookclub: 2.2, karoke: 1.5, generic: 1.8 };
+var READ_T1 = { bookclub: 1.8, karoke: 1.8, generic: 1.8, soccer: 1.8, gamer: 1.8, french: 1.8 };
+var READ_T2 = { bookclub: 2.2, karoke: 1.5, generic: 1.8, soccer: 1.8, gamer: 1.8, french: 1.8 };
 
 var w = bannerSize.w;
 var h = bannerSize.h;
