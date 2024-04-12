@@ -16,8 +16,8 @@ gsap.defaults({
 	ease: "power3.out"
 });
 
-var READ_T1 = { bookclub: 1.8, karoke: 1.8, generic: 1.8, soccer: 1.8, gamer: 1.8, french: 1.8 };
-var READ_T2 = { bookclub: 2.2, karoke: 1.5, generic: 1.8, soccer: 1.8, gamer: 1.8, french: 1.8 };
+var READ_T1 = { bookclub: 1.5, karoke: 1.5, generic: 1.5, soccer: 1.5, gamer: 1.5, french: 1.5 };
+var READ_T2 = { bookclub: 1.7, karoke: 1.5, generic: 1.8, soccer: 1.8, gamer: 1.8, french: 1.8 };
 
 var w = bannerSize.w;
 var h = bannerSize.h;
@@ -99,7 +99,7 @@ function generic() {
 	tl.to(".t1", { duration: SLIDE_DURATION, opacity: 0, y: "-=" + SLIDE_Y }, "t2");
 	tl.from(".t2", { duration: SLIDE_DURATION, opacity: 0, y: "+=" + SLIDE_Y }, "t2");
 
-	tl.add("t3", "+=" + READ_T1[universalBanner.name]);
+	tl.add("t3", "+=3");
 	tl.from(".peeps_c", { duration: SLIDE_DURATION, opacity: 0 }, "t3");
 
 	tl.add(frame2());
