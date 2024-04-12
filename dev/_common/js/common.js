@@ -35,12 +35,12 @@ function frame2(){
 
 
 	tl.from(".phone-649-bg", {duration:.3, opacity:0}, "649")
-	tl.from(".phone-649-logo", {duration:.3, scale:0, ease:"custom"}, "+=.2")
+	tl.from(".phone-649-logo", {duration:.3, scale:0, ease:"custom"})
 
 	tl.add("olg", "+=.8")
 
 	tl.to(".phone-649-logo", {duration:.3, opacity:0}, "olg")
-	tl.from(".phone-olg", {duration:.3, opacity:0}, "+=.3")
+	tl.from(".phone-olg", {duration:.3, opacity:0}, "olg")
 	tl.from(".frame2 .logo-group", {duration:.3, scale:0, ease:"custom"}, "+=.5")
 
 	tl.add("cta", "+=.3")
@@ -51,7 +51,7 @@ function frame2(){
 	tl.to(".wedge", {duration:.3, opacity:0}, "cta")
 	tl.from(".legal", {duration:.3, opacity:0}, "cta")
 	
-	// tl.play("f2")
+	
 	tl.add(olg())
 	return tl
 }
@@ -75,8 +75,9 @@ function standard(){
 
 	tl.from(".t2", {duration:SLIDE_DURATION, opacity:0, y:`+=${SLIDE_Y}`}, "t2")
 	tl.from(".frame1 .logo-group", {duration:.3, scale:0, ease:"custom"}, "+=.3")
-	
+	// tl.play("f2")
 	tl.add(frame2())
+
 	return tl	
 }
 
