@@ -320,4 +320,15 @@ canvas, .text, .frame, .outline, img {
   position: absolute;
 }
 
+.frame1 .logo-group {
+  -webkit-transform: translate(444px, 6px) scale(0.32, 0.32);
+  -ms-transform: translate(444px, 6px) scale(0.32, 0.32);
+  transform: translate(444px, 6px) scale(0.32, 0.32);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
 /*# sourceMappingURL=main.css.map */

@@ -29,7 +29,9 @@ function frame2(){
 	
 	tl.from([".phone"], {duration:.3, y:`+=${h}`}, "+=.5")
 	tl.from(".phone-max-logo", {duration:.3, scale:0, ease:"custom"})
-	
+	if(universalBanner.name==="generic"){
+		tl.from(".frame2 .logo-group", {duration:.3, scale:0, ease:"custom"})		
+	}
 	tl.add("649", "+=.8")
 	tl.to(".phone-max-logo", {duration:.3, opacity:0}, "649")
 
@@ -41,7 +43,10 @@ function frame2(){
 
 	tl.to(".phone-649-logo", {duration:.3, opacity:0}, "olg")
 	tl.from(".phone-olg", {duration:.3, opacity:0}, "olg")
-	tl.from(".frame2 .logo-group", {duration:.3, scale:0, ease:"custom"}, "+=.5")
+	if(universalBanner.name!=="generic"){
+		tl.from(".frame2 .logo-group", {duration:.3, scale:0, ease:"custom"}, "+=.5")		
+	}
+	
 
 	tl.add("cta", "+=.3")
 	if(w>h){
@@ -100,7 +105,9 @@ function generic(){
 
 	tl.add("t3", `+=3`)
 	tl.from(".peeps_c", {duration:SLIDE_DURATION, opacity:0}, "t3")
-	
+	if(w===970){
+		tl.from(".frame1 .logo-group", {duration:SLIDE_DURATION, opacity:0}, "t3")	
+	}
 	
 	
 	tl.add(frame2())
