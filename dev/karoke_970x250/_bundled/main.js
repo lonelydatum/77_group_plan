@@ -105,7 +105,7 @@ function generic() {
 
 	tl.add("t3", "+=3");
 	tl.from(".peeps_c", { duration: SLIDE_DURATION, opacity: 0 }, "t3");
-	if (w === 970) {
+	if (w === 970 || w === 320) {
 		tl.from(".frame1 .logo-group", { duration: SLIDE_DURATION, opacity: 0 }, "t3");
 	}
 
